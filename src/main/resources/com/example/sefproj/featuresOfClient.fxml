@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A00000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sefproj.FeaturesOfClientController">
+    <children>
+        <Button fx:id="concertsButton" layoutX="168.0" layoutY="124.0" mnemonicParsing="false" onAction="#concertsButtonOnAction" prefHeight="28.0" prefWidth="265.0" style="-fx-background-color: #3d2814;" text="list of all existing concerts" textFill="WHITE">
+            <font>
+                <Font name="Serif Italic" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="yourReservationsButton" layoutX="122.0" layoutY="172.0" mnemonicParsing="false" onAction="#youReservationsButtonOnAction" prefHeight="28.0" prefWidth="358.0" style="-fx-background-color: #3d2814;" text="your own reservations" textFill="WHITE">
+            <font>
+                <Font name="Serif Italic" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="makeReservationButton" layoutX="186.0" layoutY="221.0" mnemonicParsing="false" onAction="#makeReservationButtonOnAction" prefHeight="28.0" prefWidth="231.0" style="-fx-background-color: #3d2814;" text="make a reservation" textFill="WHITE">
+            <font>
+                <Font name="Serif Italic" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="backButton" layoutX="47.0" layoutY="341.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="23.0" prefWidth="49.0" style="-fx-background-color: #000000;" text="back" textFill="WHITE">
+            <font>
+                <Font name="Serif Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="exitButton" layoutX="569.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="22.0" prefWidth="33.0" style="-fx-background-color: #ffffff;" text="exit">
+            <font>
+                <Font name="Serif Italic" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

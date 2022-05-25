@@ -94,7 +94,7 @@ public class LoginClientController implements Initializable {
     public void loginButtonOnAction(ActionEvent event) throws IOException {
         if(usernameTextField.getText().isBlank()==false && enterPasswordField.getText().isBlank()==false) {
             if(validateLogin()==1) {
-                root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("listOfConcerts.fxml")));
+                root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("featuresOfClient.fxml")));
                 Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
