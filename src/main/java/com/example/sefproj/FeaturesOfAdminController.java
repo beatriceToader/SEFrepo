@@ -11,14 +11,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class FeaturesOfClientController {
+public class FeaturesOfAdminController {
 
     @FXML
     private Button concertsButton;
     @FXML
-    private Button youReservationsButton;
+    private Button rezervationsButton;
     @FXML
-    private Button makeReservationButton;
+    private Button deleteButton;
+    @FXML
+    private Button addButton;
     @FXML
     private Button backButton;
     @FXML
@@ -33,10 +35,10 @@ public class FeaturesOfClientController {
 
     public void concertsButtonOnAction(ActionEvent event) throws IOException {
         try{
-            FXMLLoader loader=new FXMLLoader(getClass().getResource("listConcertsClient.fxml"));
+            FXMLLoader loader=new FXMLLoader(getClass().getResource("listOfConcerts.fxml"));
             root=loader.load();
 
-            ListOfConcertsClientController scene2=loader.getController();
+            ListOfConcertsController scene2=loader.getController();
             scene2.displayConcerts();
 
             //root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ResultRAMScene.fxml")));
@@ -49,12 +51,12 @@ public class FeaturesOfClientController {
         }
     }
 
-    public void youReservationsButtonOnAction(ActionEvent event) throws IOException {
+    public void rezervationsButtonOnAction(ActionEvent event) throws IOException {
         try{
-            FXMLLoader loader=new FXMLLoader(getClass().getResource("yourReservations.fxml"));
+            FXMLLoader loader=new FXMLLoader(getClass().getResource("reservations.fxml"));
             root=loader.load();
 
-            YourReservationsController scene2=loader.getController();
+            ReservationsController scene2=loader.getController();
             scene2.displayRezervations();
 
             //root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ResultRAMScene.fxml")));
@@ -68,8 +70,16 @@ public class FeaturesOfClientController {
 
     }
 
-    public void makeReservationButtonOnAction(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("makeReservation.fxml")));
+    public void deleteButtonOnAction(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("listOfConcerts.fxml")));
+        Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void addButtonOnAction(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("newConcert.fxml")));
         Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -77,7 +87,7 @@ public class FeaturesOfClientController {
     }
 
     public void backButtonOnAction(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loginClient.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loginAdmin.fxml")));
         Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -90,3 +100,4 @@ public class FeaturesOfClientController {
     }
 
 }
+

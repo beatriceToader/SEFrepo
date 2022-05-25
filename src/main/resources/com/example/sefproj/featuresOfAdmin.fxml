@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A00000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sefproj.FeaturesOfAdminController">
+    <Button fx:id="concertsButton" layoutX="166.0" layoutY="113.0" mnemonicParsing="false" onAction="#concertsButtonOnAction" prefHeight="28.0" prefWidth="265.0" style="-fx-background-color: #3d2814;" text="list of all existing concerts" textFill="WHITE">
+        <font>
+            <Font name="Serif Italic" size="14.0" />
+        </font>
+    </Button>
+    <Button fx:id="rezervationsButton" layoutX="120.0" layoutY="156.0" mnemonicParsing="false" onAction="#rezervationsButtonOnAction" prefHeight="28.0" prefWidth="358.0" style="-fx-background-color: #3d2814;" text="list of made rezervations" textFill="WHITE">
+        <font>
+            <Font name="Serif Italic" size="14.0" />
+        </font>
+    </Button>
+    <Button fx:id="deleteButton" layoutX="184.0" layoutY="200.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="28.0" prefWidth="231.0" style="-fx-background-color: #3d2814;" text="delete a concert" textFill="WHITE">
+        <font>
+            <Font name="Serif Italic" size="14.0" />
+        </font>
+    </Button>
+    <Button fx:id="addButton" layoutX="234.0" layoutY="246.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="28.0" prefWidth="131.0" style="-fx-background-color: #3d2814;" text="add a concert" textFill="WHITE">
+        <font>
+            <Font name="Serif Italic" size="14.0" />
+        </font>
+    </Button>
+    <Button fx:id="backButton" layoutX="47.0" layoutY="341.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="23.0" prefWidth="49.0" style="-fx-background-color: #000000;" text="back" textFill="WHITE">
+        <font>
+            <Font name="Serif Italic" size="12.0" />
+        </font>
+    </Button>
+    <Button fx:id="exitButton" layoutX="566.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="22.0" prefWidth="34.0" style="-fx-background-color: #ffffff;" text="exit">
+        <font>
+            <Font name="System Italic" size="12.0" />
+        </font>
+    </Button>
+</AnchorPane>

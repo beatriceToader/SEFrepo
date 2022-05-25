@@ -70,6 +70,8 @@ public class LoginClientController implements Initializable {
         stage.show();
     }
 
+    private static String theUsername;
+
     public int validateLogin()  {
         try{
             InputStream file=getClass().getResourceAsStream("users.txt");
@@ -81,6 +83,7 @@ public class LoginClientController implements Initializable {
                 String username= br.readLine();
                 String password= br.readLine();
                 if(username.equals((String)usernameTextField.getText())&&password.equals((String)enterPasswordField.getText())){
+                    theUsername=username;
                     return 1;
                 }
             }
@@ -89,6 +92,10 @@ public class LoginClientController implements Initializable {
             e.printStackTrace();
         }
         return 0;
+    }
+
+    public static String getTheUsername(){
+        return theUsername;
     }
 
     public void loginButtonOnAction(ActionEvent event) throws IOException {
