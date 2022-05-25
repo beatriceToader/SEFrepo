@@ -71,7 +71,7 @@ public class FeaturesOfAdminController {
     }
 
     public void deleteButtonOnAction(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("listOfConcerts.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("deleteConcert.fxml")));
         Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
