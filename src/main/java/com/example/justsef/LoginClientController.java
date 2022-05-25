@@ -70,6 +70,8 @@ public class LoginClientController implements Initializable {
         stage.show();
     }
 
+    private static String theUsername;
+
     public int validateLogin()  {
         try{
             InputStream file=getClass().getResourceAsStream("users.txt");
@@ -81,6 +83,7 @@ public class LoginClientController implements Initializable {
                 String username= br.readLine();
                 String password= br.readLine();
                 if(username.equals((String)usernameTextField.getText())&&password.equals((String)enterPasswordField.getText())){
+                    theUsername = username;
                     return 1;
                 }
             }
@@ -91,10 +94,14 @@ public class LoginClientController implements Initializable {
         return 0;
     }
 
+    public static String getTheUsername() {
+        return theUsername;
+    }
+
     public void loginButtonOnAction(ActionEvent event) throws IOException {
         if(usernameTextField.getText().isBlank()==false && enterPasswordField.getText().isBlank()==false) {
             if(validateLogin()==1) {
-                root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("listOfConcerts.fxml")));
+                root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("featuresOfClient.fxml")));
                 Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);

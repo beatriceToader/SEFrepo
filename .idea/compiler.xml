@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="justSEF" target="17" />
+      <module name="justSEF" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>
